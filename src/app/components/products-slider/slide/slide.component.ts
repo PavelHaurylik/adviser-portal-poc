@@ -24,7 +24,7 @@ export class SlideComponent {
 
   isExpanded: WritableSignal<boolean> = signal(false);
 
-  imageUrl = './../../../assets/slide';
+  imageUrl = '/assets/images/slide';
 
   labels = [
     'News/Blogs/Seminars',
