@@ -42,4 +42,11 @@ export class SlideComponent {
     'Relevant and up to date information on apprentice pay practices in the UK based on data from over 100 organisations.',
   ];
 
+  getClasses() {
+    return {
+      ['slide-' + this.slideIndex()]: true,
+      'expanded': this.isExpanded()
+    };
+  }
+
 }
