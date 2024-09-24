@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="header-toolbar">
+  <div class="logo">
+    <a (click)="scrollTo('start')">
+      <img src="assets/icons/brand-logo.svg" alt="Mercer Logo">
+    </a>
+  </div>
+
+  <div class="right-links">
+    <a [class.active]="currentSection() === 'content-pages'" (click)="scrollTo('content-pages')">Content pages</a>
+    <a [class.active]="currentSection() === 'hub-tools'" (click)="scrollTo('hub-tools')">Hub tools</a>
+    <a [class.active]="currentSection() === 'contacts'" (click)="scrollTo('contacts')">Contacts</a>
+    <button mat-icon-button class="contact-btn" (click)="scrollTo('questions')">
+      <mat-icon svgIcon="contact-icon"></mat-icon>
+    </button>
+  </div>
+
+</mat-toolbar>

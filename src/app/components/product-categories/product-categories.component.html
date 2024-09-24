@@ -1,0 +1,26 @@
+<div class="product-categories">
+  <div class="label">
+    <div class="typo-40-700">
+      Hub tools
+    </div>
+    <div class="typo-20-400">
+      What Topic is of Interest to You?
+    </div>
+  </div>
+
+  <div class="buttons">
+    @for(btnLabel of btnLabels; track $index) {
+      <button mat-raised-button class="typo-16-500" (click)="shuffleProducts($index)" [ngClass]="activeBtnIndex() === $index ? 'active' : 'inactive'">{{ btnLabel }}</button>
+    }
+  </div>
+
+  <div class="products">
+    @for (product of shuffledProducts(); track product.key; let last = $last) {
+      <app-product [label]="product.label" [description]="productDescriptions[$index]" [icon]="'product-icon'"></app-product>
+      @if (last) {
+        <app-product class="last-product" [label]="randomEvenNumber() + ' more tools in this Category'" [btnName]="'See All'" [icon]="'product-icon-white'"></app-product>
+      }
+    }
+  </div>
+
+</div>

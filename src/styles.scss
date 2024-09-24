@@ -1,0 +1,27 @@
+@use '@angular/material' as mat;
+
+@import '@styles/dependencies';
+
+html, body {
+  height: 100%;
+  display: block;
+}
+body { margin: 0; font-family: Noto Sans, "Noto Sans"; }
+
+.mat-typography, .mat-mdc-button  {
+  font-family: Noto Sans;
+}
+
+// Apply the themes to body classes
+.light-theme {
+  background-color: white;
+}
+
+.dark-theme {
+  background-color: grey;
+}
+
+::ng-deep button.mat-raised-button {
+  color: $secondaryColor;
+  border-radius: 0;
+}

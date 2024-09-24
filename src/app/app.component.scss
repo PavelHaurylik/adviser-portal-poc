@@ -1,0 +1,42 @@
+@import "@styles/dependencies";
+
+.height {
+  height: 1500px;
+}
+.section {
+ // height: 1000px;
+}
+:host {
+  display: block;
+  height: auto;
+}
+
+.content-pages-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 572px;
+  color: $mainColor;
+  text-align: center;
+  margin: 0px auto 56px auto;
+  padding-top: 96px;
+}
+
+.recent-news-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 572px;
+  color: $mainColor;
+  text-align: center;
+  margin: 0px auto 56px auto;
+}
+
+.recent-news {
+  display: flex;
+  justify-content: center;
+  margin: 0 80px;
+}

@@ -1,0 +1,59 @@
+@import "@styles/dependencies";
+
+
+.image-container {
+  display: flex;
+  height: 680px;
+}
+
+.left-image, .right-image {
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.left-image {
+  background: linear-gradient(
+    to top right,
+    rgba(130, 70, 175, 1) 0.5%,
+    rgba(0, 44, 119, 1) 99%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  width: 465px;
+  text-align: start;
+  color: white;
+
+  .label {
+    margin-bottom: 16px;
+  }
+
+  .description {
+    margin-bottom: 48px;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+
+    button {
+      color: $secondaryColor;
+      border-radius: 0;
+      padding: 24px 32px;
+    }
+
+    .help-link {
+      color: white;
+    }
+  }
+}
+
+.right-image {
+  background-image: url('./../../../assets/top-right-img.png');
+}

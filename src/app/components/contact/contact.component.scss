@@ -1,0 +1,10 @@
+@import "@styles/dependencies";
+
+.container {
+  display: flex;
+  margin: 0px auto 140px auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 96px;
+}

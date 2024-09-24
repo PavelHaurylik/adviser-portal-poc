@@ -1,0 +1,13 @@
+<div class="slider-wrapper">
+  <swiper-container pagination="true" pagination-clickable="true" space-between="20" slides-per-view="3" navigation="true"> <!--navigation="true"-->
+
+    @for (slide of slides; track $index) {
+      <swiper-slide>
+        <div class="slider-content-wrapper">
+          <app-slide [slideIndex]="$index"></app-slide>
+        </div>
+      </swiper-slide>
+    }
+  </swiper-container>
+
+</div>

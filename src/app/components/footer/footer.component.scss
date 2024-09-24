@@ -1,0 +1,135 @@
+@import "@styles/dependencies";
+
+:host {
+  display: block;
+  margin: auto 0 0;
+}
+
+ol, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer {
+  font-family: "Noto Sans";
+  background-color: rgba(43, 43, 43, 1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    margin: 0 130px;
+    padding: 48px 50px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: end;
+    max-width: 1345px;
+    text-align: initial;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 24px;
+  }
+
+  &__logo {
+    a {
+      display: inline-block;
+    }
+
+    img {
+
+        height: auto;
+    }
+
+      grid-column: 1;
+      grid-row: 1;
+  }
+
+  &__subheading {
+
+      grid-column: 1;
+      grid-row: 2;
+      margin-right: -50%;
+  }
+
+  &__social-nav {
+    grid-column: 3;
+    grid-row: 2;
+    margin: auto 0;
+  }
+
+  &__subsidiary {
+    &-links {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    &-list {
+      display: flex;
+      width: 100%;
+      gap: 16px;
+
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 0;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: center;
+
+        margin-bottom: 0;
+        font-size: 19px;
+        line-height: 27px;
+        font-weight: 600;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+      & a {
+        color: var(--colors-action-primary-content-light);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__privacy {
+    &-links {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    &-list {
+      display: flex;
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    &-item {
+
+      & a {
+        color: var(--colors-action-primary-content-light);
+        text-decoration: none;
+        text-underline-offset: 2px;
+      }
+    }
+  }
+
+  &__copyright {
+      text-align: end;
+      grid-column: 3;
+      grid-row: 4;
+      color: rgba(191, 191, 191, 1);
+  }
+
+  .divider {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 3;
+  }
+}

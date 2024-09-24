@@ -1,0 +1,82 @@
+@import "@styles/dependencies";
+
+
+.container {
+  height: 505px;
+  max-width: 522px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 48px 40px;
+  color: white;
+  background-color: $secondaryColor;
+
+  @media (min-width: 768px) and (max-width: 1150px) {
+    width: 440px;
+  }
+
+  .label {
+    padding-bottom: 16px;
+  }
+
+  .description {
+    padding-bottom: 32px;
+  }
+
+  .center {
+    padding: 28px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 24px;
+
+    .check {
+      gap: 16px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .check-icon {
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 50px;
+        padding: 5px;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    padding-top: 35px;
+
+    &-info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 24px;
+
+      mat-icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        padding: 15px;
+        background-color: white;
+
+        svg {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+
+    .action {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

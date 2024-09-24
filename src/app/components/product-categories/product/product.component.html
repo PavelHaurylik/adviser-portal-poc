@@ -1,0 +1,15 @@
+<div class="product" @productAnimation>
+    <mat-icon class="icon-product"[svgIcon]="icon()"></mat-icon>
+    <div class="texts">
+      <div class="typo-20-700 label">{{ label() }}</div>
+      <div class="typo-20-400 description">
+        {{ description() }}
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="bottom">
+      <div>{{ btnName() }}</div>
+      <mat-icon class="icon">arrow_forward</mat-icon>
+    </div>
+</div>
+

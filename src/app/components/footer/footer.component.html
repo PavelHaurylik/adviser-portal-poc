@@ -1,0 +1,42 @@
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__content">
+      <div class="footer__logo">
+        <a [title]="'Marsh McLennan'"
+           [attr.aria-label]="'Marsh McLennan'"
+           href="'https://www.marshmclennan.com/'" target="_blank" rel="noopener">
+          <img [alt]="'Marsh McLennan'" [src]="'assets/icons/logo-marsh-mclennan-white.svg'">
+        </a>
+      </div>
+
+      <div class="footer__subheading typo-16-400">
+        <span>Mercer Super Trust is part of Marsh McLennan, a the leader in risk, strategy and people, helping clients navigate a dynamic environment.</span>
+      </div>
+
+      <div class="footer__social-nav">
+        <app-social-nav [links]="socialMediaLinks"></app-social-nav>
+      </div>
+
+      <div class="divider">
+        <mat-divider></mat-divider>
+      </div>
+
+      <div class="footer__privacy-links">
+        <ul class="footer__privacy-list">
+          @for (privacyLink of bottomLinks; track privacyLink) {
+            <li class="footer__privacy-item">
+              <a [href]="privacyLink.url"
+                 [title]="privacyLink.label"
+                 [attr.aria-label]="privacyLink.label" target="_blank" class="mercer-link-section__link typo-18-500">
+                {{privacyLink.label}}
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="footer__copyright typo-14-500">© 2024 Mercer LLC. All Rights Reserved</div>
+
+      </div>
+  </div>
+</footer>

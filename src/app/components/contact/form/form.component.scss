@@ -1,0 +1,71 @@
+@import "@styles/dependencies";
+
+
+.contact-form {
+  max-width: 522px;
+  margin: 0 auto;
+
+  ::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid) .mat-mdc-notch-piece {
+    border-color: $secondaryColor;
+  }
+
+  .field-row {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 5px;
+
+    textarea {
+      resize: none;
+      height: 244px;
+    }
+
+    mat-label {
+      color: $thirdColor;
+      @extend .typo-16-400;
+    }
+  }
+
+  button {
+    width: 100%;
+    margin-top: 5px;
+    color: $secondaryColor;
+    border-radius: 0;
+    padding: 24px 32px;
+    border: 1px solid $secondaryColor;
+    background-color: white;
+  }
+
+  .mat-mdc-dialog-surface mdc-dialog__surface {
+    border-radius: 0;
+  }
+
+}
+::ng-deep app-dialog {
+  .label {
+    background-color: $secondaryColor;
+    color: white !important;
+  }
+
+  .content {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn {
+    color: $mainColor;
+    padding: 0px 24px 15px;
+    cursor: pointer;
+    display: flex;
+    align-self: flex-end;
+  }
+}
+
+::ng-deep mat-dialog-container .mat-mdc-dialog-surface {
+  border-radius: 4px;
+}

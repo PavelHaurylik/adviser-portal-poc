@@ -1,0 +1,59 @@
+$font-noto-sans: 'Noto Sans';
+$font-mmc-display: 'MMC Display';
+$letter-spacing: 0.25px;
+
+@mixin typo($size, $weight, $line-height, $font-family: $font-noto-sans) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  font-family: $font-family;
+}
+
+.typo-16-400 {
+  @include typo(16px, 400, 32px);
+}
+
+.typo-16-500 {
+  @include typo(16px, 500, 32px);
+}
+
+.typo-16-600 {
+  @include typo(16px, 600, 32px);
+}
+
+.typo-18-400 {
+  @include typo(18px, 400, 32px);
+}
+
+.typo-18-500 {
+  @include typo(18px, 500, 32px);
+}
+
+.typo-18-700 {
+  @include typo(18px, 700, 32px);
+}
+
+.typo-20-400 {
+  @include typo(20px, 400, 27px);
+}
+
+.typo-20-700 {
+  @include typo(20px, 700, 27px);
+}
+
+.typo-24-700 {
+  @include typo(24px, 700, 27px);
+}
+
+.typo-32-700 {
+  @include typo(32px, 700, 43px, $font-mmc-display);
+}
+
+.typo-40-700 {
+  @include typo(40px, 700, 53px, $font-mmc-display);
+}
+
+.typo-48-700 {
+  @include typo(48px, 700, 56px, $font-mmc-display);
+}

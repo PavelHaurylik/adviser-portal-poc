@@ -1,0 +1,86 @@
+@import "@styles/dependencies";
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  .news {
+    height: 600px;
+    width: 560px;
+    flex: 1 1 calc(40% - 20px);
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    //transition: box-shadow 0.3s ease;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      height: auto;
+      max-width: 50%;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .img {
+      height: 270px;
+    }
+
+    .date {
+      padding: 32px 24px 0 24px;
+      color: $mainColor;
+      display: flex;
+      gap: 10px;
+    }
+
+    .texts {
+      padding: 16px 24px 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 24px;
+
+      .label {
+        color: $mainColor;
+        font-weight: bold;
+      }
+
+      .description {
+        color: $thirdColor;
+      }
+    }
+
+    ::ng-deep mat-divider.mat-divider {
+      margin: 0 24px;
+      border-top-color: rgba(0, 0, 0, 0.15);
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 24px 0 24px;
+      color: $secondaryColor;
+    }
+  }
+}
+
+button {
+  color: $secondaryColor;
+  border-radius: 0;
+  padding: 28px 30px;
+  border: 1px solid $secondaryColor;
+  background-color: white !important;
+  margin: 48px auto 0 auto;
+  align-self: center;
+  display: flex;
+}

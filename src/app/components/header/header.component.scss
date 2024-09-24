@@ -1,0 +1,58 @@
+@use '@angular/material' as mat;
+
+@import "@styles/dependencies";
+
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  padding: 16px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .logo {
+    display: flex;
+    flex: 0 1 80%;
+    align-self: flex-end;
+
+    a {
+      cursor: pointer;
+    }
+  }
+
+  .right-links {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+
+    .contact-btn {
+      background-color: $mainColor;
+    }
+
+    a {
+      cursor: pointer;
+      color: $mainColor;
+      text-decoration: none;
+      position: relative;
+      @extend .typo-16-600;
+    }
+
+    a.active {
+      color: $secondaryColor;
+    }
+
+    a.active::after  {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      background-color: $secondaryColor;
+    }
+  }
+
+}

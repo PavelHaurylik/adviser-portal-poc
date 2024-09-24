@@ -1,0 +1,71 @@
+@import "@styles/dependencies";
+:host {
+  display: flex;
+
+  .product {
+    height: 340px;
+    width: 328px;
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: white;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      height: auto;
+      max-width: 50%;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: scale(1.025);
+    }
+
+    .icon-product {
+      margin-bottom: 26px;
+      color: $mainColor;
+      width: 42px;
+      height: 42px;
+    }
+
+    .texts {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: auto;
+
+      .label {
+        color: $mainColor;
+        font-weight: bold;
+      }
+
+      .description {
+        color: $thirdColor;
+      }
+    }
+
+    ::ng-deep mat-divider.mat-divider {
+      border-top-color: rgba(0, 0, 0, 0.15);
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 24px;
+      color: $secondaryColor;
+    }
+  }
+
+  mat-icon svg {
+    width: 42px;
+    height: 42px;
+  }
+
+}
+

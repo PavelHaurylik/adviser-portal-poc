@@ -1,0 +1,16 @@
+<div class="typo-40-700 main-label">
+  Have Questions?
+</div>
+<div class="accordion-container">
+  <mat-accordion>
+    @for (panelLabel of panelLabels; track $index) {
+      <mat-expansion-panel (opened)="onOpened($index)" (closed)="onClosed($index)" hideToggle class="panel" [ngClass]="panelOpenState().has($index) ? 'active' : ''">
+        <mat-expansion-panel-header>
+          <mat-panel-title  class="typo-20-700 panel-label"> {{ panelLabels[$index] }} </mat-panel-title>
+          <mat-icon [svgIcon]="panelOpenState().has($index) ? 'remove-small' : 'plus-small'"></mat-icon>
+        </mat-expansion-panel-header>
+        <div class="typo-20-400 panel-content">{{ panelContents[$index] }}</div>
+      </mat-expansion-panel>
+    }
+  </mat-accordion>
+</div>
