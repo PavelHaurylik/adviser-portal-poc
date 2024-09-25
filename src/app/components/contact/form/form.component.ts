@@ -40,10 +40,16 @@ export class ContactFormComponent {
     this.contactForm.markAllAsTouched();
 
     if (this.contactForm.valid) {
+      this.selectedFileName.set('');
+
       this.contactForm.reset();
 
       this.contactForm.markAsUntouched();
       this.contactForm.markAsPristine();
+      this.contactForm.controls['name'].setErrors(null);
+      this.contactForm.controls['surname'].setErrors(null);
+      this.contactForm.controls['email'].setErrors(null);
+
       this.openDialog()
     }
   }
