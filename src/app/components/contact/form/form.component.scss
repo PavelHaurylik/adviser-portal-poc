@@ -21,7 +21,7 @@
 
     textarea {
       resize: none;
-      height: 244px;
+      height: 206px;
     }
 
     mat-label {
@@ -30,7 +30,14 @@
     }
   }
 
-  button {
+  .file-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+
+  .submit-btn {
     width: 100%;
     margin-top: 5px;
     color: $secondaryColor;

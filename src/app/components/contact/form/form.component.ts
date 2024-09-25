@@ -1,15 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
+import { MatButtonModule, MatIconButton } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import {
-  MatDialog,
-  MAT_DIALOG_DATA,
-  MatDialogTitle,
-  MatDialogContent,
-} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-contact-form',
@@ -19,12 +15,16 @@ import { DialogComponent } from './dialog/dialog.component';
     MatInputModule,
     MatButtonModule,
     ReactiveFormsModule,
+    MatIconModule,
+    MatIconButton
   ],
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
 export class ContactFormComponent {
   contactForm: FormGroup;
+
+  selectedFileName: WritableSignal<string> = signal('');
 
   constructor(private fb: FormBuilder, private dialog: MatDialog) {
     this.contactForm = this.fb.group({
@@ -45,6 +45,13 @@ export class ContactFormComponent {
       this.contactForm.markAsUntouched();
       this.contactForm.markAsPristine();
       this.openDialog()
+    }
+  }
+
+  onFileSelected(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files.length > 0) {
+      this.selectedFileName.set(input.files[0].name);
     }
   }
 

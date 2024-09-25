@@ -38,9 +38,15 @@
   <mat-form-field appearance="outline">
     <mat-label>Briefly, tell us the reason for contacting us</mat-label>
     <textarea matInput formControlName="reason" placeholder="Your message"></textarea>
+    <div class="file-container">
+      <input hidden (change)="onFileSelected($event)" #fileInput type="file" id="file">
+      <span>{{ selectedFileName() }}</span>
+      <button mat-icon-button clas="file-btn" (click)="fileInput.click()">
+        <mat-icon>attach_file</mat-icon>
+      </button>
+    </div>
   </mat-form-field>
-
-  <button mat-raised-button class="typo-18-700" type="button" (click)="onSubmit()">
+  <button mat-raised-button class="typo-18-700 submit-btn" type="button" (click)="onSubmit()">
     Submit
   </button>
 
