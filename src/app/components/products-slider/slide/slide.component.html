@@ -1,4 +1,4 @@
-<button mat-icon-button class="expanded-btn" (click)="isExpanded.set(!isExpanded())">
+<button mat-icon-button class="expanded-btn" (click)="isExpanded.set(!isExpanded())" aria-label="Additional info">
   <mat-icon size="medium" class="slide-icon" [svgIcon]="isExpanded() ? 'remove' : 'plus'"></mat-icon>
 </button>
 <div class="slide "

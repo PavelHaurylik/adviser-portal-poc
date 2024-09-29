@@ -9,7 +9,7 @@
     <a [class.active]="currentSection() === 'content-pages'" (click)="scrollTo('content-pages')">Content pages</a>
     <a [class.active]="currentSection() === 'hub-tools'" (click)="scrollTo('hub-tools')">Hub tools</a>
     <a [class.active]="currentSection() === 'contacts'" (click)="scrollTo('contacts')">Contact us</a>
-    <button mat-icon-button class="contact-btn" (click)="scrollTo('questions')">
+    <button mat-icon-button class="contact-btn" (click)="scrollTo('questions')" aria-label="Help">
       <mat-icon svgIcon="contact-icon"></mat-icon>
     </button>
   </div>

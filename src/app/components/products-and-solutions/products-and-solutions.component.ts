@@ -22,7 +22,7 @@ export class PrductsAndSolutionsComponent implements AfterViewInit {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const imageContainer = document.querySelector('.right-image');
-          imageContainer?.setAttribute('style', 'background-image: url(assets/media/top-right-img.webp)');
+          imageContainer?.setAttribute('style', 'background-image: url(media/top-right-img.webp)');
           observer.disconnect();
         }
       });
