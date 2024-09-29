@@ -29,6 +29,9 @@
               { "glob": "**/*", "input": "src/assets", "output": "/assets/" },
               { "glob": "azure-blue.css", "input": "node_modules/@angular/material/prebuilt-themes", "output": "/assets/styles/" }
             ],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
