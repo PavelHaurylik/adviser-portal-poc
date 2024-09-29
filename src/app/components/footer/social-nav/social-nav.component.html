@@ -2,7 +2,7 @@
   @for(link of socialLinks; track link) {
     <li class="social-nav__list-item">
       <a [href]="link.url" [attr.aria-label]="link.socialMedia">
-        <img [ngSrc]="link.iconUrl" width="36" height="36">
+        <img [ngSrc]="link.iconUrl" [alt]="link.socialMedia" width="36" height="36">
       </a>
     </li>
   }
